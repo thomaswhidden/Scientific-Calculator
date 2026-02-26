@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div id="expression"></div>
+      <div id="result">0</div>
+    </div>
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn sci" onclick="appendToExpr('Math.sin(')">sin</button>
+      <button class="btn sci" onclick="appendToExpr('Math.cos(')">cos</button>
+      <button class="btn sci" onclick="appendToExpr('Math.tan(')">tan</button>
+      <button class="btn sci" onclick="appendToExpr('Math.log10(')">log</button>
+      <button class="btn sci" onclick="appendToExpr('Math.log(')">ln</button>
+
+      <!-- Row 2 -->
+      <button class="btn sci" onclick="appendToExpr('Math.sqrt(')">√</button>
+      <button class="btn sci" onclick="appendToExpr('Math.PI')">π</button>
+      <button class="btn sci" onclick="appendToExpr('Math.E')">e</button>
+      <button class="btn sci" onclick="appendToExpr('**')">xʸ</button>
+      <button class="btn sci" onclick="appendToExpr('(')">( )</button>
+
+      <!-- Row 3 -->
+      <button class="btn clear" onclick="clearAll()">C</button>
+      <button class="btn operator" onclick="deleteLast()">⌫</button>
+      <button class="btn operator" onclick="appendToExpr('%')">%</button>
+      <button class="btn operator" onclick="appendToExpr('/')">÷</button>
+      <button class="btn operator" onclick="appendToExpr('*')">×</button>
+
+      <!-- Row 4 -->
+      <button class="btn" onclick="appendToExpr('7')">7</button>
+      <button class="btn" onclick="appendToExpr('8')">8</button>
+      <button class="btn" onclick="appendToExpr('9')">9</button>
+      <button class="btn operator" onclick="appendToExpr('-')">−</button>
+
+      <!-- Row 5 -->
+      <button class="btn" onclick="appendToExpr('4')">4</button>
+      <button class="btn" onclick="appendToExpr('5')">5</button>
+      <button class="btn" onclick="appendToExpr('6')">6</button>
+      <button class="btn operator" onclick="appendToExpr('+')">+</button>
+
+      <!-- Row 6 -->
+      <button class="btn" onclick="appendToExpr('1')">1</button>
+      <button class="btn" onclick="appendToExpr('2')">2</button>
+      <button class="btn" onclick="appendToExpr('3')">3</button>
+      <button class="btn equals" onclick="calculate()">=</button>
+
+      <!-- Row 7 -->
+      <button class="btn zero" onclick="appendToExpr('0')">0</button>
+      <button class="btn" onclick="appendToExpr('.')">.</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
