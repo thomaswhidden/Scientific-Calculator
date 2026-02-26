@@ -48,9 +48,16 @@ body {
   word-break: break-all;
 }
 
-.buttons {
+.sci-buttons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.main-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
@@ -104,7 +111,6 @@ body {
 .btn.equals {
   background: #2b6cb0;
   color: white;
-  grid-row: span 2;
 }
 
 .btn.equals:hover {

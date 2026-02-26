@@ -1,12 +1,14 @@
 let expression = '';
 
 function appendToExpr(value) {
-  // Auto-close parentheses for functions
-  if (value === '(') {
-    expression += '(';
-  } else {
-    expression += value;
-  }
+  expression += value;
+  updateDisplay();
+}
+
+function smartParen() {
+  const opens = (expression.match(/\(/g) || []).length;
+  const closes = (expression.match(/\)/g) || []).length;
+  expression += opens > closes ? ')' : '(';
   updateDisplay();
 }
 
